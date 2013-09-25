@@ -12,24 +12,24 @@ import com.sudocode.maximus.logger.Logger;
  * Date: 9/25/13
  * Time: 9:38 AM
  */
-public class ApplicationUsersActivity extends Activity {
+public class SignUpActivity extends Activity {
 
-    private static final Logger logger = Logger.getLogger(ApplicationUsersActivity.class);
+    private static final Logger logger = Logger.getLogger(SignUpActivity.class);
     private TextView mTextView;
     private Bundle mBundle;
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.user_list);
+        setContentView(R.layout.sign_up_layout);
 
-        mTextView = (TextView) findViewById(R.id.tvTempTitle);
+//        mTextView = (TextView) findViewById(R.id.tvTempTitle);
 
         if (getIntent().getExtras() != null) {
             mBundle = getIntent().getExtras();
             final String userName = mBundle.get("userName").toString();
 
             logger.debug("Check user name field:: " + userName);
-            mTextView.setText("Hello " + userName);
+//            mTextView.setText("Hello " + userName);
 
         }
     }

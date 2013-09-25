@@ -61,7 +61,7 @@ public class LoginActivity extends Activity {
 
         logger.debug("Call sign-up screen :: " + getApplicationContext().getResources().getString(view.getId()));
 
-        Intent mUserListIntent = new Intent(getApplicationContext(), ApplicationUsersActivity.class);
+        Intent mUserListIntent = new Intent(getApplicationContext(), SignUpActivity.class);
         mUserListIntent.putExtra("userName", mUserName.getText());
         mUserListIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         getApplicationContext().startActivity(mUserListIntent);
