@@ -1,6 +1,7 @@
 package com.sudocode.login.app;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.Menu;
@@ -28,7 +29,6 @@ public class LoginActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         initWidgets();
     }
 
@@ -45,14 +45,27 @@ public class LoginActivity extends Activity {
     }
 
 
+    /**
+     * This method is bind from the callback method defined in the layout xml.
+     */
     public void onLogin(View view) {
         if (TextUtils.isEmpty(mUserName.getText()) || TextUtils.isEmpty(mPassword.getText())) {
             Toast.makeText(getApplicationContext(), "Please enter user name and password", Toast.LENGTH_SHORT).show();
         }
     }
 
+    /**
+     * This method is bind from the callback method defined in the layout xml.
+     */
     public void onSignUp(View view) {
-        logger.debug("Call sign-up screen");
+
+        logger.debug("Call sign-up screen :: " + getApplicationContext().getResources().getString(view.getId()));
+
+        Intent mUserListIntent = new Intent(getApplicationContext(), ApplicationUsersActivity.class);
+        mUserListIntent.putExtra("userName", mUserName.getText());
+        mUserListIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        getApplicationContext().startActivity(mUserListIntent);
+
     }
 }
 
