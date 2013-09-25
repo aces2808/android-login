@@ -1,3 +1,5 @@
 /storage/research-projects/maven-projects/android-login/target/generated-sources/r/com/sudocode/login/R.java
+/storage/research-projects/maven-projects/android-login/src/main/java/com/sudocode/login/app/LoginActivity.java
+/storage/research-projects/maven-projects/android-login/src/main/java/com/sudocode/login/engine/LoginEngine.java
+/storage/research-projects/maven-projects/android-login/src/main/java/com/sudocode/login/db/provider/LoginProvider.java
 /storage/research-projects/maven-projects/android-login/target/generated-sources/r/com/sudocode/login/BuildConfig.java
-/storage/research-projects/maven-projects/android-login/src/main/java/com/sudocode/login/HelloAndroidActivity.java

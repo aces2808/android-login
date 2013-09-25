@@ -1,15 +1,15 @@
-package com.sudocode.login;
+package com.sudocode.login.app;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
+import com.sudocode.login.R;
 
-public class HelloAndroidActivity extends Activity {
+public class LoginActivity extends Activity {
 
     /**
-     * Called when the activity is first created.
-     * @param savedInstanceState If the activity is being re-initialized after 
+     * Called when the login is first created.
+     * @param savedInstanceState If the login is being re-initialized after
      * previously being shut down then this Bundle contains the data it most 
      * recently supplied in onSaveInstanceState(Bundle). <b>Note: Otherwise it is null.</b>
      */
