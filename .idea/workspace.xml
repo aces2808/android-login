@@ -25,13 +25,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e5e822ab-176c-45db-b746-dccef38b01fa" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/sign_up_layout.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/layout/user_list.xml" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/sudocode/login/app/ApplicationUsersActivity.java" afterPath="$PROJECT_DIR$/src/main/java/com/sudocode/login/app/SignUpActivity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/sudocode/login/db/model/LoginDbContract.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/sudocode/login/engine/LoginDbEngine.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/sudocode/login/db/helper/LoginDbHelper.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/values/login_table_param.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/android-login.apk" afterPath="$PROJECT_DIR$/target/android-login.apk" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/android-login.unaligned.apk" afterPath="$PROJECT_DIR$/target/android-login.unaligned.apk" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AndroidManifest.xml" afterPath="$PROJECT_DIR$/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/sudocode/login/app/LoginActivity.java" afterPath="$PROJECT_DIR$/src/main/java/com/sudocode/login/app/LoginActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/sudocode/login/engine/LoginEngine.java" afterPath="$PROJECT_DIR$/src/main/java/com/sudocode/login/engine/LoginEngine.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="android-login.iws" />
@@ -44,7 +45,7 @@
     <file path="$PROJECT_DIR$/res/values-v11/styles.xml" changelist="e5e822ab-176c-45db-b746-dccef38b01fa" time="1380103739277" ignored="false" />
     <file path="/strings.xml" changelist="e5e822ab-176c-45db-b746-dccef38b01fa" time="1380104032187" ignored="false" />
     <file path="/fragment.java" changelist="e5e822ab-176c-45db-b746-dccef38b01fa" time="1380105853248" ignored="false" />
-    <file path="/LoginEngine.java" changelist="e5e822ab-176c-45db-b746-dccef38b01fa" time="1380107846817" ignored="false" />
+    <file path="/LoginEngine.java" changelist="e5e822ab-176c-45db-b746-dccef38b01fa" time="1380191471153" ignored="false" />
     <file path="/LoginBaseProvider.java" changelist="e5e822ab-176c-45db-b746-dccef38b01fa" time="1380108031297" ignored="false" />
     <file path="/LoginProviderExceptions.java" changelist="e5e822ab-176c-45db-b746-dccef38b01fa" time="1380108168804" ignored="false" />
     <file path="/LoginService.java" changelist="e5e822ab-176c-45db-b746-dccef38b01fa" time="1380112096448" ignored="false" />
@@ -54,6 +55,11 @@
     <file path="/LoginActivity.java" changelist="e5e822ab-176c-45db-b746-dccef38b01fa" time="1380117867585" ignored="false" />
     <file path="/ApplicationUsers.java" changelist="e5e822ab-176c-45db-b746-dccef38b01fa" time="1380118439303" ignored="false" />
     <file path="/ApplicationUsersActivity.java" changelist="e5e822ab-176c-45db-b746-dccef38b01fa" time="1380117342214" ignored="false" />
+    <file path="/LoginDbHelper.java" changelist="e5e822ab-176c-45db-b746-dccef38b01fa" time="1380191273684" ignored="false" />
+    <file path="/LoginDbContract.java" changelist="e5e822ab-176c-45db-b746-dccef38b01fa" time="1380190092046" ignored="false" />
+    <file path="/login_table_param.xml" changelist="e5e822ab-176c-45db-b746-dccef38b01fa" time="1380189772046" ignored="false" />
+    <file path="/LoginDbEngine.java" changelist="e5e822ab-176c-45db-b746-dccef38b01fa" time="1380191431197" ignored="false" />
+    <file path="/AndroidManifest.xml" changelist="e5e822ab-176c-45db-b746-dccef38b01fa" time="1380191672889" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,7 +123,7 @@
       <file leaf-file-name="LoginBaseProvider.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/sudocode/login/db/provider/LoginBaseProvider.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="107" selection-start="532" selection-end="532" vertical-scroll-proportion="-6.32">
+            <state line="22" column="20" selection-start="532" selection-end="532" vertical-scroll-proportion="-6.32">
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1016#1024#0" expanded="true" />
@@ -127,10 +133,54 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LoginProviderExceptions.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/sudocode/login/exceptions/LoginProviderExceptions.java">
+      <file leaf-file-name="LoginDbHelper.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/sudocode/login/db/helper/LoginDbHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="29" selection-start="368" selection-end="368" vertical-scroll-proportion="-3.32">
+            <state line="29" column="64" selection-start="823" selection-end="823" vertical-scroll-proportion="-17.4">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LoginEngine.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/sudocode/login/engine/LoginEngine.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="18" column="84" selection-start="439" selection-end="439" vertical-scroll-proportion="-5.12">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LoginDbContract.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/sudocode/login/db/model/LoginDbContract.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="28" column="63" selection-start="960" selection-end="960" vertical-scroll-proportion="-16.52">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LoginDbEngine.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/sudocode/login/engine/LoginDbEngine.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="35" column="16" selection-start="838" selection-end="838" vertical-scroll-proportion="-8.12">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login_table_param.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/values/login_table_param.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="0" selection-start="51" selection-end="51" vertical-scroll-proportion="-1.2">
               <folding />
             </state>
           </provider>
@@ -148,51 +198,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LoginService.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/sudocode/login/service/LoginService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="5" selection-start="464" selection-end="464" vertical-scroll-proportion="-12.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LoginReceiver.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/sudocode/login/receiver/LoginReceiver.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="0" selection-start="289" selection-end="289" vertical-scroll-proportion="-8.4">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LoginEngine.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/sudocode/login/engine/LoginEngine.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="56" selection-start="454" selection-end="454" vertical-scroll-proportion="-11.4">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="activity_main.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/layout/activity_main.xml">
-          <provider editor-type-id="text-editor">
-            <state line="15" column="39" selection-start="833" selection-end="833" vertical-scroll-proportion="-9.0">
-              <folding />
-            </state>
-          </provider>
-          <provider selected="true" editor-type-id="android-designer">
-            <state />
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="LoginActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/sudocode/login/app/LoginActivity.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -202,19 +207,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AndroidManifest.xml" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="AndroidManifest.xml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="27" selection-start="594" selection-end="594" vertical-scroll-proportion="0.0">
+            <state line="11" column="87" selection-start="382" selection-end="382" vertical-scroll-proportion="0.3038674">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SignUpActivity.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="SignUpActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/sudocode/login/app/SignUpActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="106" selection-start="619" selection-end="619" vertical-scroll-proportion="0.4208494">
+            <state line="29" column="0" selection-start="852" selection-end="852" vertical-scroll-proportion="-15.0">
               <folding />
             </state>
           </provider>
@@ -238,15 +243,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/sudocode/activity/LoginActivity.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sudocode/login/LoginActivity.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sudocode/login/db/provider/LoginProvider.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sudocode/login/engine/LoginEngine.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sudocode/login/exceptions/LoginProviderExceptions.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sudocode/login/db/provider/LoginBaseProvider.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sudocode/login/service/LoginService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sudocode/login/receiver/LoginReceiver.java" />
         <option value="$PROJECT_DIR$/res/layout/activity_main.xml" />
         <option value="$PROJECT_DIR$/res/layout/user_list.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/sudocode/login/app/ApplicationUsers.java" />
@@ -254,6 +250,15 @@
         <option value="$PROJECT_DIR$/src/main/java/com/sudocode/login/app/ApplicationUsersActivity.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sudocode/login/app/SignUpActivity.java" />
         <option value="$PROJECT_DIR$/res/layout/sign_up_layout.xml" />
+        <option value="$PROJECT_DIR$/res/values/login_table_param.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sudocode/login/db/model/LoginDbContract.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sudocode/login/db/helper/LoginDbEngine.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sudocode/login/db/helper/LoginDbUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sudocode/login/engine/LoginDbUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sudocode/login/db/helper/LoginDbHelper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sudocode/login/engine/LoginDbEngine.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sudocode/login/engine/LoginEngine.java" />
+        <option value="$PROJECT_DIR$/AndroidManifest.xml" />
       </list>
     </option>
   </component>
@@ -371,6 +376,58 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="engine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="android-login" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="android-login" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="helper" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="android-login" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="android-login" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -386,6 +443,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="android-login" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="android-login" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="values" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -629,12 +704,12 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.659322" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4694915" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.67118645" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.53050846" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32881355" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -707,13 +782,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="52" selection-start="216" selection-end="216" vertical-scroll-proportion="-3.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="29" column="0" selection-start="1143" selection-end="1143" vertical-scroll-proportion="0.0">
@@ -725,15 +793,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="28" selection-start="158" selection-end="158" vertical-scroll-proportion="-4.8">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sudocode/login/engine/LoginEngine.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="56" selection-start="454" selection-end="454" vertical-scroll-proportion="-11.4">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -749,9 +808,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sudocode/login/receiver/LoginReceiver.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="14" column="0" selection-start="289" selection-end="289" vertical-scroll-proportion="-8.4">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -779,21 +836,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sudocode/login/app/SignUpActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="27" selection-start="594" selection-end="594" vertical-scroll-proportion="0.0">
+        <state line="29" column="0" selection-start="852" selection-end="852" vertical-scroll-proportion="-15.0">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sudocode/login/db/provider/LoginBaseProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="107" selection-start="532" selection-end="532" vertical-scroll-proportion="-6.32">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1016#1024#0" expanded="true" />
-            <element signature="e#1114#1122#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -807,9 +853,63 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sudocode/login/app/SignUpActivity.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sudocode/login/db/provider/LoginBaseProvider.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="106" selection-start="619" selection-end="619" vertical-scroll-proportion="0.4208494">
+        <state line="22" column="20" selection-start="532" selection-end="532" vertical-scroll-proportion="-6.32">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1016#1024#0" expanded="true" />
+            <element signature="e#1114#1122#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values/login_table_param.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="0" selection-start="51" selection-end="51" vertical-scroll-proportion="-1.2">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sudocode/login/db/model/LoginDbContract.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="63" selection-start="960" selection-end="960" vertical-scroll-proportion="-16.52">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sudocode/login/db/helper/LoginDbHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="64" selection-start="823" selection-end="823" vertical-scroll-proportion="-17.4">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sudocode/login/engine/LoginDbEngine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="16" selection-start="838" selection-end="838" vertical-scroll-proportion="-8.12">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sudocode/login/engine/LoginEngine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="84" selection-start="439" selection-end="439" vertical-scroll-proportion="-5.12">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="87" selection-start="382" selection-end="382" vertical-scroll-proportion="0.3038674">
           <folding />
         </state>
       </provider>

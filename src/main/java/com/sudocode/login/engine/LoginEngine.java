@@ -1,6 +1,7 @@
 package com.sudocode.login.engine;
 
 import android.app.Application;
+import android.content.Context;
 import com.sudocode.maximus.logger.Logger;
 
 /**
@@ -12,6 +13,7 @@ import com.sudocode.maximus.logger.Logger;
 public class LoginEngine extends Application {
 
     private static final Logger logger = Logger.getLogger(LoginEngine.class);
+    private static Context mContext;
 
     @Override
     public void onCreate() {
@@ -19,5 +21,18 @@ public class LoginEngine extends Application {
 
         logger.debug("start loading application services");
 
+        LoginEngine.mContext = this;
+
+        /*
+         *  Initialize database
+         */
+        LoginDbEngine.init(this);
+        LoginDbEngine.getInstance().open();
+
+
+    }
+
+    public static Context getmContext() {
+        return mContext;
     }
 }
