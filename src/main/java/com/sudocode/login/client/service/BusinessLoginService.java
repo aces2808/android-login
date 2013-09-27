@@ -8,7 +8,7 @@ import android.content.ContentValues;
  * Date: 9/27/13
  * Time: 6:52 AM
  */
-public interface LoginService {
+public interface BusinessLoginService {
 
 
     /**

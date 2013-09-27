@@ -1,7 +1,9 @@
 package com.sudocode.login.client.impl;
 
+import android.content.AsyncQueryHandler;
+import android.content.ContentResolver;
 import android.content.ContentValues;
-import com.sudocode.login.client.service.LoginService;
+import com.sudocode.login.client.service.BusinessLoginService;
 import com.sudocode.maximus.logger.Logger;
 
 /**
@@ -10,9 +12,16 @@ import com.sudocode.maximus.logger.Logger;
  * Date: 9/27/13
  * Time: 6:57 AM
  */
-public class LoginServiceImpl implements LoginService {
+public class BusinessLoginServiceImpl extends AsyncQueryHandler implements BusinessLoginService {
 
-    private static final Logger logger = Logger.getLogger(LoginServiceImpl.class);
+    private static final Logger logger = Logger.getLogger(BusinessLoginServiceImpl.class);
+
+    private ContentResolver mContentResolver;
+
+    public BusinessLoginServiceImpl(ContentResolver mContentResolver) {
+        super(mContentResolver);
+        this.mContentResolver = mContentResolver;
+    }
 
     /**
      * Validates if user exist on the login table
