@@ -2,6 +2,7 @@ package com.sudocode.login.engine;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteOpenHelper;
 import com.sudocode.login.db.helper.LoginDbHelper;
 
 /**
@@ -47,4 +48,7 @@ public class LoginDbEngine {
         mLoginDbHelper.close();
     }
 
+    public LoginDbHelper getmLoginDbHelper() {
+        return mLoginDbHelper;
+    }
 }
