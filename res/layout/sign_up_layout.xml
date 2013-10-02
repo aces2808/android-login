@@ -19,7 +19,7 @@
               android:layout_marginTop="133dp"/>
     <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Password:"
               android:id="@+id/tvPassword"
-              android:layout_alignLeft="@+id/tvFname" android:layout_alignBottom="@+id/editText"/>
+              android:layout_alignLeft="@+id/tvFname" android:layout_alignBottom="@+id/etPassword"/>
     <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -28,11 +28,20 @@
     <EditText android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/etLname"
               android:width="120dp" android:layout_alignLeft="@+id/etFname" android:layout_alignParentTop="true"
               android:layout_marginTop="58dp"/>
-    <EditText android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/etUserName"
+    <EditText android:layout_width="wrap_content" android:layout_height="wrap_content"
+              android:id="@+id/etSignUpUserName"
               android:width="120dp"
               android:layout_alignLeft="@+id/etFname" android:layout_alignBottom="@+id/tvUserName"/>
-    <EditText android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/editText"
+    <EditText android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/etPassword"
               android:width="120dp"
               android:layout_alignLeft="@+id/etFname" android:layout_alignParentTop="true"
               android:layout_marginTop="176dp" android:inputType="textPassword"/>
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Submit"
+            android:id="@+id/bSubmit"
+            android:layout_centerHorizontal="true" android:layout_alignParentTop="true"
+            android:layout_marginTop="241dp"
+            android:onClick="onSubmit"/>
 </RelativeLayout>

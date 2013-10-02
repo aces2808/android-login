@@ -3,7 +3,11 @@ package com.sudocode.login.client.impl;
 import android.content.AsyncQueryHandler;
 import android.content.ContentResolver;
 import android.content.ContentValues;
+import android.database.Cursor;
+import android.util.Log;
 import com.sudocode.login.client.service.BusinessLoginService;
+import com.sudocode.login.db.model.LoginDbContract;
+import com.sudocode.login.engine.LoginEngine;
 import com.sudocode.maximus.logger.Logger;
 
 /**
@@ -16,11 +20,17 @@ public class BusinessLoginServiceImpl extends AsyncQueryHandler implements Busin
 
     private static final Logger logger = Logger.getLogger(BusinessLoginServiceImpl.class);
 
+    private static final int QUERY_USER = 0x0407;
+
     private ContentResolver mContentResolver;
 
     public BusinessLoginServiceImpl(ContentResolver mContentResolver) {
         super(mContentResolver);
         this.mContentResolver = mContentResolver;
+    }
+
+    public static BusinessLoginService getInstance() {
+        return LoginService.getInstance();
     }
 
     /**
@@ -31,6 +41,21 @@ public class BusinessLoginServiceImpl extends AsyncQueryHandler implements Busin
      */
     @Override
     public boolean isUserExist(String userName, String password) {
+
+        Cursor mCursor = null;
+
+        if (mContentResolver != null) {
+
+            logger.debug("Check login table:: START");
+
+//            String[] mArgs = {userName};
+            mCursor = mContentResolver.query(LoginDbContract.LoginTable.LOGIN_URI, LoginDbContract.LoginTable.LOGIN_COL, LoginDbContract.LoginTable.WHERE_LOGIN, null, null);
+
+            if (mCursor != null) {
+
+            }
+        }
+
         return false;
     }
 
@@ -41,5 +66,20 @@ public class BusinessLoginServiceImpl extends AsyncQueryHandler implements Busin
      */
     @Override
     public void insertUserAccount(ContentValues contentValues) {
+
+    }
+
+    /**
+     * Thread safe initialization
+     */
+    private static class LoginService {
+
+        private static BusinessLoginService instance;
+
+        private static final BusinessLoginService getInstance() {
+            if (instance == null)
+                instance = new BusinessLoginServiceImpl(LoginEngine.getmContext().getContentResolver());
+            return instance;
+        }
     }
 }

@@ -9,11 +9,15 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 import com.sudocode.login.R;
+import com.sudocode.login.client.impl.BusinessLoginServiceImpl;
+import com.sudocode.login.client.service.BusinessLoginService;
 import com.sudocode.maximus.logger.Logger;
 
 public class LoginActivity extends Activity {
 
     private static final Logger logger = Logger.getLogger(LoginActivity.class);
+
+    private BusinessLoginService mLoginService;
 
     private EditText mUserName;
     private EditText mPassword;
@@ -29,6 +33,7 @@ public class LoginActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        mLoginService = BusinessLoginServiceImpl.getInstance();
         initWidgets();
     }
 
@@ -49,9 +54,17 @@ public class LoginActivity extends Activity {
      * This method is bind from the callback method defined in the layout xml.
      */
     public void onLogin(View view) {
+
         if (TextUtils.isEmpty(mUserName.getText()) || TextUtils.isEmpty(mPassword.getText())) {
             Toast.makeText(getApplicationContext(), "Please enter user name and password", Toast.LENGTH_SHORT).show();
+        } else {
+
+            logger.debug(" user name:: " + mUserName.getText().toString() + " password:: " + mPassword.getText().toString());
+
+            mLoginService.isUserExist(mUserName.getText().toString(), mPassword.getText().toString());
         }
+
+
     }
 
     /**

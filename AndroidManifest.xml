@@ -22,6 +22,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".app.SignUpActivity"/>
+
+        <provider android:name=".db.provider.LoginProvider" android:authorities="com.login.db.provider.contract.login"/>
     </application>
 
 </manifest>
