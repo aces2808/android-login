@@ -16,7 +16,7 @@ public class LoginDbHelper extends SQLiteOpenHelper {
 
     private static final Logger logger = Logger.getLogger(LoginDbHelper.class);
 
-    private static final int DB_VER = 0x01;
+    private static final int DB_VER = 0x02;
     private static final String DB_NAME = "login.sqlite";
 
     public LoginDbHelper(Context context) {
@@ -26,7 +26,8 @@ public class LoginDbHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
 
-        logger.debug(LoginDbContract.LoginTable.CREATE_SQL);
+        logger.debug("login service:: " + LoginDbContract.LoginTable.CREATE_SQL);
+        logger.debug("login service:: login Uri:: " + LoginDbContract.LoginTable.LOGIN_URI);
 
         sqLiteDatabase.execSQL(LoginDbContract.LoginTable.CREATE_SQL);
     }

@@ -10,6 +10,26 @@ import android.content.ContentValues;
  */
 public interface BusinessLoginService {
 
+    /**
+     * User name
+     */
+    String UNAME = "uname";
+
+    /**
+     * First name of user
+     */
+    String FNAME = "fname";
+
+    /**
+     * Last name of user
+     */
+    String LNAME = "lname";
+
+    /**
+     * Password of user
+     */
+    String PASSWD = "passwd";
+
 
     /**
      * Validates if user exist on the login table

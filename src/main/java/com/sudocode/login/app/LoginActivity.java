@@ -72,7 +72,7 @@ public class LoginActivity extends Activity {
      */
     public void onSignUp(View view) {
 
-        logger.debug("Call sign-up screen :: " + getApplicationContext().getResources().getString(view.getId()));
+        logger.debug("login service:: sign-up screen :: " + getApplicationContext().getResources().getString(view.getId()));
 
         Intent mUserListIntent = new Intent(getApplicationContext(), SignUpActivity.class);
         mUserListIntent.putExtra("userName", mUserName.getText());

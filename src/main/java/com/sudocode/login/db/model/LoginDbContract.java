@@ -28,7 +28,7 @@ public final class LoginDbContract {
 
         String CREATE_SQL = "CREATE TABLE IF NOT EXISTS " + TABLE_NAME + " (" + _ID
                 + " INTEGER PRIMARY KEY AUTOINCREMENT, " + USER_COL + " TEXT, " + FNAME_COL
-                + " TEXT );";
+                + " TEXT, " + LNAME_COL + " TEXT, " + PASSWD_COL + " TEXT );";
 
         String DROP_SQL = "DROP TABLE IF EXISTS " + TABLE_NAME;
 

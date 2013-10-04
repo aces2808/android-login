@@ -46,7 +46,7 @@ public class BusinessLoginServiceImpl extends AsyncQueryHandler implements Busin
 
         if (mContentResolver != null) {
 
-            logger.debug("Check login table:: START");
+            logger.debug("login service:: START");
 
 //            String[] mArgs = {userName};
             mCursor = mContentResolver.query(LoginDbContract.LoginTable.LOGIN_URI, LoginDbContract.LoginTable.LOGIN_COL, LoginDbContract.LoginTable.WHERE_LOGIN, null, null);
@@ -66,6 +66,11 @@ public class BusinessLoginServiceImpl extends AsyncQueryHandler implements Busin
      */
     @Override
     public void insertUserAccount(ContentValues contentValues) {
+
+        if (contentValues != null) {
+            logger.debug("login service:: insert values :: START :: " + contentValues.getAsString(UNAME));
+//            mContentResolver.insert(LoginDbContract.LoginTable.LOGIN_URI, contentValues);
+        }
 
     }
 
