@@ -13,22 +13,22 @@ public interface BusinessLoginService {
     /**
      * User name
      */
-    String UNAME = "uname";
+    String UNAME = "UserName";
 
     /**
      * First name of user
      */
-    String FNAME = "fname";
+    String FNAME = "FirstName";
 
     /**
      * Last name of user
      */
-    String LNAME = "lname";
+    String LNAME = "LastName";
 
     /**
      * Password of user
      */
-    String PASSWD = "passwd";
+    String PASSWD = "Password";
 
 
     /**

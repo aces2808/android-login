@@ -55,13 +55,27 @@ public class LoginActivity extends Activity {
      */
     public void onLogin(View view) {
 
-        if (TextUtils.isEmpty(mUserName.getText()) || TextUtils.isEmpty(mPassword.getText())) {
-            Toast.makeText(getApplicationContext(), "Please enter user name and password", Toast.LENGTH_SHORT).show();
+        if (TextUtils.isEmpty(mUserName.getText()) ||
+                TextUtils.isEmpty(mPassword.getText())) {
+
+            Toast.makeText(getApplicationContext(),
+                    "Please enter user name and password", Toast.LENGTH_SHORT).show();
         } else {
 
-            logger.debug(" user name:: " + mUserName.getText().toString() + " password:: " + mPassword.getText().toString());
+            logger.debug(" user name:: " + mUserName.getText().toString()
+                    + " password:: " + mPassword.getText().toString());
 
-            mLoginService.isUserExist(mUserName.getText().toString(), mPassword.getText().toString());
+            if (mLoginService.isUserExist(mUserName.getText().toString(),
+                    mPassword.getText().toString())) {
+
+                Toast.makeText(this, "You have successfully logged in!!!",
+                        Toast.LENGTH_SHORT).show();
+            } else {
+
+                Toast.makeText(this, "User does not exist/ password is invalid",
+                        Toast.LENGTH_SHORT).show();
+
+            }
         }
 
 

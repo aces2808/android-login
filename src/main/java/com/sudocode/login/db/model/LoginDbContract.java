@@ -2,6 +2,7 @@ package com.sudocode.login.db.model;
 
 import android.net.Uri;
 import android.provider.BaseColumns;
+import android.util.SparseArray;
 import com.sudocode.maximus.logger.Logger;
 
 /**
@@ -13,7 +14,8 @@ import com.sudocode.maximus.logger.Logger;
 public final class LoginDbContract {
 
     public static final String AUTHORITY = "com.login.db.provider.contract.login";
-    private static final String BASE_PATH = "base-login";
+    private static final String BASE_PATH = "/LoginTable";
+
 
     public static interface LoginTable extends BaseColumns {
 
@@ -34,8 +36,9 @@ public final class LoginDbContract {
 
         Uri LOGIN_URI = Uri.parse("content://" + AUTHORITY + BASE_PATH);
 
-        String[] LOGIN_COL = {_ID, USER_COL, FNAME_COL};
-        String WHERE_LOGIN = USER_COL + " = ?";
+        int LOGIN_TABLE_ID = 0x28;
+        String[] LOGIN_COL = {_ID, USER_COL, FNAME_COL, LNAME_COL, PASSWD_COL};
+        String WHERE_LOGIN = USER_COL + " = ? AND " + PASSWD_COL + " =? ";
 
     }
 
