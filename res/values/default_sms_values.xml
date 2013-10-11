@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="remote_address">09434265199</string>
+    <string name="default_sms_message">User successfully logged in</string>
+</resources>

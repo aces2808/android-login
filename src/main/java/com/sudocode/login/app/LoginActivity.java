@@ -11,6 +11,7 @@ import android.widget.Toast;
 import com.sudocode.login.R;
 import com.sudocode.login.client.impl.BusinessLoginServiceImpl;
 import com.sudocode.login.client.service.BusinessLoginService;
+import com.sudocode.login.constants.Login;
 import com.sudocode.maximus.logger.Logger;
 
 public class LoginActivity extends Activity {
@@ -70,6 +71,12 @@ public class LoginActivity extends Activity {
 
                 Toast.makeText(this, "You have successfully logged in!!!",
                         Toast.LENGTH_SHORT).show();
+
+                final Intent mIntent = new Intent();
+                mIntent.setAction(Login.LOGIN_SUCCESS);
+                sendBroadcast(mIntent);
+                finish();
+
             } else {
 
                 Toast.makeText(this, "User does not exist/ password is invalid",
@@ -94,5 +101,6 @@ public class LoginActivity extends Activity {
         getApplicationContext().startActivity(mUserListIntent);
 
     }
+
 }
 

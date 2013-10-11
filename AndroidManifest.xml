@@ -7,6 +7,8 @@
     <uses-sdk
             android:minSdkVersion="8"
             android:targetSdkVersion="16"/>
+    <uses-permission android:name="android.permission.SEND_SMS"/>
+    <uses-permission android:name="android.permission.RECEIVE_SMS"/>
 
     <application
             android:name=".engine.LoginEngine"
@@ -22,10 +24,20 @@
             </intent-filter>
         </activity>
         <activity android:name=".app.SignUpActivity"/>
+        <activity android:name=".app.LoginContactList"/>
 
         <provider
                 android:name=".db.provider.LoginProvider"
                 android:authorities="com.login.db.provider.contract.login"/>
+
+        <receiver android:name=".receiver.LoginReceiver">
+            <intent-filter>
+                <action android:name="com.sudocode.login.LOGIN_SUCCESS"/>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>
