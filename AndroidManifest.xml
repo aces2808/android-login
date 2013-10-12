@@ -16,6 +16,7 @@
             android:icon="@drawable/ic_launcher"
             android:label="@string/app_name"
             android:theme="@style/AppTheme">
+        <!-- Android activity -->
         <activity android:name=".app.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -26,10 +27,12 @@
         <activity android:name=".app.SignUpActivity"/>
         <activity android:name=".app.LoginContactList"/>
 
+        <!-- Android Provider -->
         <provider
                 android:name=".db.provider.LoginProvider"
                 android:authorities="com.login.db.provider.contract.login"/>
 
+        <!-- Android Receiver-->
         <receiver android:name=".receiver.LoginReceiver">
             <intent-filter>
                 <action android:name="com.sudocode.login.LOGIN_SUCCESS"/>
@@ -38,6 +41,9 @@
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </receiver>
+
+        <!-- Android Service -->
+        <service android:name=".service.LoginService"/>
     </application>
 
 </manifest>

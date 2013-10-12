@@ -29,23 +29,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e5e822ab-176c-45db-b746-dccef38b01fa" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/sudocode/login/constants/Login.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/sudocode/login/app/LoginContactList.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/sudocode/login/adapter/LoginContactsAdapter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/sudocode/login/db/helper/LoginQueryHelper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/contacts_layout.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/values/default_sms_values.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/android-login.apk" afterPath="$PROJECT_DIR$/target/android-login.apk" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/android-login.unaligned.apk" afterPath="$PROJECT_DIR$/target/android-login.unaligned.apk" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AndroidManifest.xml" afterPath="$PROJECT_DIR$/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/sudocode/login/app/LoginActivity.java" afterPath="$PROJECT_DIR$/src/main/java/com/sudocode/login/app/LoginActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/sudocode/login/receiver/LoginReceiver.java" afterPath="$PROJECT_DIR$/src/main/java/com/sudocode/login/receiver/LoginReceiver.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/sudocode/login/service/LoginService.java" afterPath="$PROJECT_DIR$/src/main/java/com/sudocode/login/service/LoginService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="android-login.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="e5e822ab-176c-45db-b746-dccef38b01fa" time="1381409254589" ignored="false" />
-    <file path="/AndroidManifest.xml" changelist="e5e822ab-176c-45db-b746-dccef38b01fa" time="1381483680356" ignored="false" />
+    <file path="/AndroidManifest.xml" changelist="e5e822ab-176c-45db-b746-dccef38b01fa" time="1381540889819" ignored="false" />
     <file path="/LoginDbContract.java" changelist="e5e822ab-176c-45db-b746-dccef38b01fa" time="1381127096344" ignored="false" />
     <file path="/LoginActivity.java" changelist="e5e822ab-176c-45db-b746-dccef38b01fa" time="1381484178387" ignored="false" />
     <file path="/BusinessLoginServiceImpl.java" changelist="e5e822ab-176c-45db-b746-dccef38b01fa" time="1381128295835" ignored="false" />
@@ -59,6 +50,7 @@
     <file path="/LoginQueryHelper.java" changelist="e5e822ab-176c-45db-b746-dccef38b01fa" time="1381482944496" ignored="false" />
     <file path="/LoginContactList.java" changelist="e5e822ab-176c-45db-b746-dccef38b01fa" time="1381483213084" ignored="false" />
     <file path="/default_sms_values.xml" changelist="e5e822ab-176c-45db-b746-dccef38b01fa" time="1381484917988" ignored="false" />
+    <file path="/LoginService.java" changelist="e5e822ab-176c-45db-b746-dccef38b01fa" time="1381540281158" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -159,10 +151,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LoginReceiver.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="LoginReceiver.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/sudocode/login/receiver/LoginReceiver.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="64" selection-start="1088" selection-end="1088" vertical-scroll-proportion="0.6961326">
+            <state line="14" column="67" selection-start="411" selection-end="411" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -171,7 +163,7 @@
       <file leaf-file-name="LoginService.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/sudocode/login/service/LoginService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="42" selection-start="437" selection-end="437" vertical-scroll-proportion="0.0">
+            <state line="26" column="27" selection-start="658" selection-end="658" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -195,10 +187,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AndroidManifest.xml" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="AndroidManifest.xml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="80" selection-start="1478" selection-end="1478" vertical-scroll-proportion="0.0">
+            <state line="43" column="8" selection-start="1705" selection-end="1705" vertical-scroll-proportion="0.80662984">
               <folding />
             </state>
           </provider>
@@ -231,7 +223,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/sudocode/login/db/provider/SampleProvider.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/sudocode/login/client/service/BusinessLoginService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sudocode/login/db/model/LoginDbContract.java" />
@@ -242,11 +233,12 @@
         <option value="$PROJECT_DIR$/src/main/java/com/sudocode/login/adapter/LoginContactsAdapter.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sudocode/login/db/helper/LoginQueryHelper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sudocode/login/app/LoginContactList.java" />
-        <option value="$PROJECT_DIR$/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/sudocode/login/app/LoginActivity.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sudocode/login/constants/Login.java" />
         <option value="$PROJECT_DIR$/res/values/default_sms_values.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/sudocode/login/receiver/LoginReceiver.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sudocode/login/service/LoginService.java" />
+        <option value="$PROJECT_DIR$/AndroidManifest.xml" />
       </list>
     </option>
   </component>
@@ -552,6 +544,36 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="android-login" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="android-login" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="impl" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1021,13 +1043,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="80" selection-start="1478" selection-end="1478" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sudocode/login/db/helper/LoginQueryHelper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="43" column="59" selection-start="1239" selection-end="1239" vertical-scroll-proportion="0.0">
@@ -1065,16 +1080,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sudocode/login/service/LoginService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sudocode/login/receiver/LoginReceiver.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="42" selection-start="437" selection-end="437" vertical-scroll-proportion="0.0">
+        <state line="14" column="67" selection-start="411" selection-end="411" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sudocode/login/receiver/LoginReceiver.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sudocode/login/service/LoginService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="64" selection-start="1088" selection-end="1088" vertical-scroll-proportion="0.6961326">
+        <state line="26" column="27" selection-start="658" selection-end="658" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="8" selection-start="1705" selection-end="1705" vertical-scroll-proportion="0.80662984">
           <folding />
         </state>
       </provider>
